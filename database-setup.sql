@@ -32,25 +32,28 @@ ON DUPLICATE KEY UPDATE password = VALUES(password);
 
 -- Thêm dữ liệu mẫu cho bảng phongban
 INSERT INTO phongban (IDPB, TenPB) VALUES 
-('IT', 'Phòng Công nghệ thông tin'),
-('HR', 'Phòng Nhân sự'),
-('ACC', 'Phòng Kế toán'),
-('MKT', 'Phòng Marketing'),
-('SALE', 'Phòng Kinh doanh')
+('PB01', 'Phòng Nhân sự'),
+('PB02', 'Phòng Hành chính'),
+('PB03', 'Phòng Kế toán'),
+('PB04', 'Phòng Công nghệ thông tin'),
+('PB05', 'Phòng Marketing'),
+('PB06', 'Phòng Kinh doanh')
 ON DUPLICATE KEY UPDATE TenPB = VALUES(TenPB);
 
 -- Thêm dữ liệu mẫu cho bảng nhanvien
 INSERT INTO nhanvien (IDNV, Hoten, IDPB, Diachi) VALUES 
-('NV001', 'Nguyễn Văn An', 'IT', 'Hà Nội'),
-('NV002', 'Trần Thị Bình', 'HR', 'TP. Hồ Chí Minh'),
-('NV003', 'Lê Văn Cường', 'ACC', 'Đà Nẵng'),
-('NV004', 'Phạm Thị Dung', 'MKT', 'Hải Phòng'),
-('NV005', 'Hoàng Văn Em', 'SALE', 'Cần Thơ'),
-('NV006', 'Vũ Thị Phương', 'IT', 'Hà Nội'),
-('NV007', 'Đỗ Văn Giang', 'HR', 'TP. Hồ Chí Minh'),
-('NV008', 'Bùi Thị Hạnh', 'ACC', 'Đà Nẵng'),
-('NV009', 'Ngô Văn Ích', 'MKT', 'Hải Phòng'),
-('NV010', 'Lý Thị Kim', 'SALE', 'Cần Thơ')
+('NV001', 'Nguyễn Văn An', 'PB01', 'Hà Nội'),
+('NV002', 'Trần Thị Bình', 'PB01', 'TP. Hồ Chí Minh'),
+('NV003', 'Lê Văn Cường', 'PB02', 'Đà Nẵng'),
+('NV004', 'Phạm Thị Dung', 'PB02', 'Hải Phòng'),
+('NV005', 'Hoàng Văn Em', 'PB03', 'Cần Thơ'),
+('NV006', 'Vũ Thị Phương', 'PB03', 'Hà Nội'),
+('NV007', 'Đỗ Văn Giang', 'PB04', 'TP. Hồ Chí Minh'),
+('NV008', 'Bùi Thị Hạnh', 'PB04', 'Đà Nẵng'),
+('NV009', 'Ngô Văn Ích', 'PB05', 'Hải Phòng'),
+('NV010', 'Lý Thị Kim', 'PB05', 'Cần Thơ'),
+('NV011', 'Nguyễn Thị Lan', 'PB06', 'Hà Nội'),
+('NV012', 'Trần Văn Minh', 'PB06', 'TP. Hồ Chí Minh')
 ON DUPLICATE KEY UPDATE 
     Hoten = VALUES(Hoten),
     IDPB = VALUES(IDPB),

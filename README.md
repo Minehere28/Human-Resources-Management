@@ -131,10 +131,18 @@ CREATE TABLE admin (
 ### Bảng `phongban`
 ```sql
 CREATE TABLE phongban (
-    IDPB VARCHAR(10) PRIMARY KEY,
-    TenPB VARCHAR(100) NOT NULL
+    IDPB VARCHAR(10) PRIMARY KEY,     -- Định dạng: PB01, PB02, PB03, ...
+    TenPB VARCHAR(100) NOT NULL       -- Tên phòng ban
 );
 ```
+
+**Dữ liệu mẫu phòng ban:**
+- PB01: Phòng Nhân sự
+- PB02: Phòng Hành chính  
+- PB03: Phòng Kế toán
+- PB04: Phòng Công nghệ thông tin
+- PB05: Phòng Marketing
+- PB06: Phòng Kinh doanh
 
 ### Bảng `nhanvien`
 ```sql
